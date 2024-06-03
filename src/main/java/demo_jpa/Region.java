@@ -1,17 +1,32 @@
 package demo_jpa;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+
 /**
  * création de la table Region
  */
+@Entity
+@Table(name="Region")
 public class Region {
+	@Id
 	private int id;
+	@Column(name="nom", length = 30, nullable = false)
 	private String nom;
 	
-	
+
+	/** Constructeur
+	 * 
+	 */
 	public Region() {
 		
 	}
-	Region r1 = new Region();
+	
+
+
 	/** Getter pour id
 	 * @return the id 
 	*/
